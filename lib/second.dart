@@ -19,7 +19,19 @@ class Currency extends StatelessWidget{
             style:TextStyle(color :Colors.orange),
             decoration: InputDecoration(
               label: Text("pleaase enter in no ",
-              style: TextStyle(color:Colors.white),),
+              style: TextStyle(color:Colors.black),
+              ),
+              prefixIcon: Icon(Icons.monetization_on_outlined),
+              prefixIconColor: Colors.black,
+              filled:true,
+              fillColor: Colors.white,
+              focusedBorder: OutlineInputBorder(
+                borderSide: const BorderSide(
+                  color: Colors.red,
+                  width :2.0,
+                  style: BorderStyle.solid
+                ),
+              ),
             ),
           ),
           ],),)

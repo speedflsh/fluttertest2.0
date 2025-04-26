@@ -1,9 +1,16 @@
 import "package:flutter/material.dart";
-
 class Currency extends StatelessWidget{
   const Currency({super.key});
   @override
   Widget build(BuildContext context){
+    final border = OutlineInputBorder(
+                borderSide: const BorderSide(
+                  color: Colors.red,
+                  width :2.0,
+                  style: BorderStyle.solid,
+                ),
+                borderRadius:   BorderRadius.circular(60));
+
     return  Scaffold(
       backgroundColor: Color.fromRGBO(0, 0, 0, 1),
       body: Center(
@@ -25,17 +32,11 @@ class Currency extends StatelessWidget{
               prefixIconColor: Colors.black,
               filled:true,
               fillColor: Colors.white,
-              focusedBorder: OutlineInputBorder(
-                borderSide: const BorderSide(
-                  color: Colors.red,
-                  width :2.0,
-                  style: BorderStyle.solid,
-                ),
-                borderRadius:   BorderRadius.circular(60),
-
-              ),
+              focusedBorder: border,
+              enabledBorder:  border,
 
             ),
+            keyboardType: TextInputType.numberWithOptions(decimal:true),
           ),
           ],),)
     );

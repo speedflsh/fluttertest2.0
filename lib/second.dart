@@ -22,21 +22,24 @@ class Currency extends StatelessWidget{
             fontWeight: FontWeight.w900,
             color:Color.fromARGB(216, 255, 0, 170),
           ),),
-          TextField(
-            style:const TextStyle(color :Colors.orange),
-            decoration: InputDecoration(
-              label: Text("pleaase enter in no ",
-              style:const  TextStyle(color:Colors.black),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: TextField(
+              style:const TextStyle(color :Colors.orange),
+              decoration: InputDecoration(
+                label: Text("pleaase enter in no ",
+                style:const  TextStyle(color:Colors.black),
+                ),
+                prefixIcon: Icon(Icons.monetization_on_outlined),
+                prefixIconColor: Colors.black,
+                filled:true,
+                fillColor: Colors.white,
+                focusedBorder: border,
+                enabledBorder:  border,
+            
               ),
-              prefixIcon: Icon(Icons.monetization_on_outlined),
-              prefixIconColor: Colors.black,
-              filled:true,
-              fillColor: Colors.white,
-              focusedBorder: border,
-              enabledBorder:  border,
-
+              keyboardType: TextInputType.numberWithOptions(decimal:true),
             ),
-            keyboardType: TextInputType.numberWithOptions(decimal:true),
           ),
           ],),)
     );
